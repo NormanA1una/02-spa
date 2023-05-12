@@ -6,16 +6,28 @@
       width="50"
       height="50"
     />
-    <a
-      href="#"
-      class="mx-2 no-underline text-white hover:bg-slate-800 duration-500 p-2 rounded-lg"
-      >Home</a
-    >
-    <a
-      href="#"
-      class="mx-0.5 no-underline text-white hover:bg-slate-800 duration-500 p-2 rounded-lg"
-      >Link</a
-    >
+    <div routerLinkActive="active">
+      <a
+        [routerLink]="['home']"
+        class="mx-2 no-underline text-current hover:bg-slate-800 duration-500 p-2 rounded-lg"
+        >Home</a
+      >
+    </div>
+    <div routerLinkActive="active">
+      <a
+        [routerLink]="['heroes']"
+        class="mx-0.5 no-underline text-current hover:bg-slate-800 duration-500 p-2 rounded-lg"
+        >Heroes</a
+      >
+    </div>
+    <div routerLinkActive="active">
+      <a
+        [routerLink]="['about']"
+        class="mx-0.5 no-underline text-current hover:bg-slate-800 duration-500 p-2 rounded-lg"
+        >About</a
+      >
+    </div>
+
     <span class="example-spacer"></span>
     <form action="">
       <input class="h-6 rounded mr-2" type="text" placeholder="Search..." />
