@@ -12,7 +12,7 @@ import { MatCardModule } from '@angular/material/card';
 //rutas
 import { APP_ROUNTING } from './app.routes';
 //servicios
-
+import { HeroesService } from './services/heroes.service';
 //componentes
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -38,7 +38,7 @@ import { HeroesComponent } from './components/heroes/heroes.component';
     MatCardModule,
     APP_ROUNTING,
   ],
-  providers: [],
+  providers: [HeroesService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

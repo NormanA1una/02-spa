@@ -13,7 +13,13 @@ body {
 }
 
 .active {
-  color: aliceblue;
+  box-shadow: 2px 2px 5px 2px rgb(255, 0, 0, 0.2),
+    -2px -2px 5px 5px rgba(255, 0, 0, 0.2);
+}
+
+.example-header-image {
+  background-image: url("assets/image/aquaman.png");
+  background-size: cover;
 }
 
 /*Animaciones*/
