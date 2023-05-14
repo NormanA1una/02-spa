@@ -1,0 +1,62 @@
+<div>
+  <mat-toolbar class="bg-slate-900">
+    <!-- <div routerLinkActive="active" class="rounded-lg ml-2">
+      <a
+        [routerLink]="['home']"
+        class="mx-2 no-underline text-rose-500 p-2 rounded-lg"
+        >Home</a
+      >
+    </div>
+    <div routerLinkActive="active" class="rounded-lg">
+      <a
+        [routerLink]="['heroes']"
+        class="mx-0.5 no-underline text-rose-500 p-2 rounded-lg"
+        >Heroes</a
+      >
+    </div>
+    <div routerLinkActive="active" class="rounded-lg">
+      <a
+        [routerLink]="['about']"
+        class="mx-0.5 no-underline text-rose-500 p-2 rounded-lg"
+        >About</a
+      >
+    </div> -->
+  </mat-toolbar>
+  <mat-expansion-panel
+    (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false"
+  >
+    <mat-expansion-panel-header>
+      <mat-panel-description>
+        <img
+          src="assets/image/A-64.png"
+          alt="Avengers Icon"
+          width="50"
+          height="50"
+        />
+        {{ panelOpenState ? "Heroe's App" : "Heroe's App" }}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div routerLinkActive="active" class="rounded-lg ml-2">
+      <a
+        [routerLink]="['home']"
+        class="mx-2 no-underline text-rose-500 p-2 rounded-lg"
+        >Home</a
+      >
+    </div>
+    <div routerLinkActive="active" class="rounded-lg">
+      <a
+        [routerLink]="['heroes']"
+        class="mx-0.5 no-underline text-rose-500 p-2 rounded-lg"
+        >Heroes</a
+      >
+    </div>
+    <div routerLinkActive="active" class="rounded-lg">
+      <a
+        [routerLink]="['about']"
+        class="mx-0.5 no-underline text-rose-500 p-2 rounded-lg"
+        >About</a
+      >
+    </div>
+  </mat-expansion-panel>
+</div>
