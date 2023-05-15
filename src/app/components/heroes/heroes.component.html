@@ -1,8 +1,8 @@
-<div class="p-4">
+<div class="p-4 animated fadeIn">
   <h1>Heroes <small>Marvel y Dc</small></h1>
   <hr />
   <div class="grid grid-cols-1 min-[820px]:grid-cols-3 gap-y-4 mt-4">
-    <mat-card class="max-w-[400px]" *ngFor="let heroe of heroes">
+    <mat-card class="max-w-[400px]" *ngFor="let heroe of heroes; let i = index">
       <mat-card-header>
         <mat-card-title> {{ heroe.nombre }} </mat-card-title>
         <mat-card-subtitle>Aparición: {{ heroe.aparicion }}</mat-card-subtitle>
@@ -20,9 +20,22 @@
           <p>Esto es el footer</p>
         </mat-card-content>
       </mat-card-footer>
-      <button mat-raised-button color="primary" class="w-[90%] mx-auto my-2">
+      <button
+        (click)="verHeroe(i)"
+        mat-raised-button
+        color="primary"
+        class="w-[90%] mx-auto my-2"
+      >
         Mostrar...
       </button>
+      <!-- <a
+        [routerLink]="['/heroe', i]"
+        mat-raised-button
+        color="primary"
+        class="w-[90%] mx-auto my-[10px]"
+      >
+        ver mas...</a
+      > -->
     </mat-card>
   </div>
 </div>

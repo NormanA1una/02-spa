@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar-mobile.component.css'],
 })
 export class NavbarMobileComponent {
-  panelOpenState = false;
+  desplegar = false;
 }

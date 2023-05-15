@@ -7,6 +7,22 @@
         width="50"
         height="50"
       />
+    </div>
+    <button
+      (click)="desplegar = !desplegar"
+      mat-icon-button
+      class="example-icon hover:bg-slate-800 duration-500"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon class="text-white">menu</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <mat-toolbar
+    class="bg-slate-900 justify-center transition-opacity"
+    *ngIf="desplegar"
+  >
+    <div class="flex items-center">
       <div routerLinkActive="active" class="rounded-lg ml-2">
         <a
           [routerLink]="['home']"
@@ -29,12 +45,5 @@
         >
       </div>
     </div>
-    <button
-      mat-icon-button
-      class="example-icon hover:bg-slate-800 duration-500"
-      aria-label="Example icon-button with menu icon"
-    >
-      <mat-icon class="text-white">menu</mat-icon>
-    </button>
   </mat-toolbar>
 </div>
