@@ -1,1 +1,43 @@
-<p>heroe works!</p>
+<div class="m-8 animated fadeIn">
+  <h1>
+    {{ heroe.nombre }} <small> {{ heroe.aparicion }} </small>
+  </h1>
+  <hr />
+
+  <div class="grid grid-cols-2">
+    <div>
+      <img
+        width="400px"
+        height="400px"
+        [src]="heroe.image"
+        [alt]="heroe.nombre"
+      />
+      <a [routerLink]="['/heroes']" mat-raised-button color="primary"
+        >Regresar</a
+      >
+    </div>
+    <div>
+      <h3>{{ heroe.nombre }}</h3>
+      <hr />
+      <p>
+        {{ heroe.bio }}
+      </p>
+      <div>
+        <img
+          *ngIf="heroe.casa === 'DC'"
+          width="200px"
+          height="100px"
+          src="assets/image/DC_Comics-Logo-PNG6.png"
+          alt="DC"
+        />
+        <img
+          *ngIf="heroe.casa === 'Marvel'"
+          width="200px"
+          height="100px"
+          src="assets/image/Marvel Logo-Logo-PNG5.png"
+          alt="Marvel"
+        />
+      </div>
+    </div>
+  </div>
+</div>
