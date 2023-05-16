@@ -9,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDividerModule } from '@angular/material/divider';
 
 //rutas
 import { APP_ROUNTING } from './app.routes';
@@ -21,6 +22,7 @@ import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { NavbarMobileComponent } from './components/shared/navbar-mobile/navbar-mobile.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
+import { BusquedaHeroeComponent } from './components/busqueda-heroe/busqueda-heroe.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { HeroeComponent } from './components/heroe/heroe.component';
     HeroesComponent,
     NavbarMobileComponent,
     HeroeComponent,
+    BusquedaHeroeComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +45,7 @@ import { HeroeComponent } from './components/heroe/heroe.component';
     MatFormFieldModule,
     MatCardModule,
     MatExpansionModule,
+    MatDividerModule,
     APP_ROUNTING,
   ],
   providers: [HeroesService],

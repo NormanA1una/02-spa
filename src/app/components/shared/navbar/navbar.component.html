@@ -29,13 +29,22 @@
     </div>
 
     <span class="example-spacer"></span>
-    <form action="">
-      <input class="h-6 rounded mr-2" type="text" placeholder="Search..." />
+
+    <form>
+      <input
+        class="h-6 rounded mr-2"
+        type="text"
+        placeholder="Buscar Heroe"
+        #buscarTexto
+        (keyup.enter)="buscarHeroe(buscarTexto.value)"
+      />
     </form>
     <button
       mat-icon-button
+      type="button"
       class="example-icon hover:bg-slate-800 duration-500"
       aria-label="Example icon-button with menu icon"
+      (click)="buscarHeroe(buscarTexto.value); verResultado()"
     >
       <mat-icon class="text-white">search</mat-icon>
     </button>

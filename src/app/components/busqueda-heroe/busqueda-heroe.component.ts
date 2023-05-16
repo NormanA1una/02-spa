@@ -3,13 +3,12 @@ import { HeroesService, Heroes } from '../../services/heroes.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-heroes',
-  templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.css'],
+  selector: 'app-busqueda-heroe',
+  templateUrl: './busqueda-heroe.component.html',
+  styleUrls: ['./busqueda-heroe.component.css'],
 })
-export class HeroesComponent implements OnInit {
+export class BusquedaHeroeComponent implements OnInit {
   heroes: Heroes[] = [];
-
   constructor(private _heroesService: HeroesService, private router: Router) {}
 
   ngOnInit() {
