@@ -10,10 +10,10 @@ export class NavbarComponent {
   constructor(private router: Router) {}
 
   buscarHeroe(termino: string) {
-    console.log(termino);
+    this.router.navigate(['/busquedaHeroe', termino]);
   }
 
-  verResultado() {
-    this.router.navigate(['/busquedaHeroe']);
+  verResultado(termino: string) {
+    this.router.navigate(['/busquedaHeroe', termino]);
   }
 }

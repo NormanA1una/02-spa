@@ -23,6 +23,7 @@ import { HeroesComponent } from './components/heroes/heroes.component';
 import { NavbarMobileComponent } from './components/shared/navbar-mobile/navbar-mobile.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { BusquedaHeroeComponent } from './components/busqueda-heroe/busqueda-heroe.component';
+import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { BusquedaHeroeComponent } from './components/busqueda-heroe/busqueda-her
     NavbarMobileComponent,
     HeroeComponent,
     BusquedaHeroeComponent,
+    HeroeTarjetaComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,29 @@
+<div>
+  <mat-card class="max-w-[400px] mx-auto">
+    <mat-card-header>
+      <mat-card-title> {{ heroe.nombre }} </mat-card-title>
+      <mat-card-subtitle>Aparición: {{ heroe.aparicion }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="heroe.image" alt="Heroes Photo" />
+    <mat-card-content>
+      <p>
+        <span> Biografía: </span>
+        <br />
+        {{ heroe.bio }}
+      </p>
+    </mat-card-content>
+    <mat-card-footer>
+      <mat-card-content>
+        <p>Esto es el footer</p>
+      </mat-card-content>
+    </mat-card-footer>
+    <button
+      (click)="verHeroe()"
+      mat-raised-button
+      color="primary"
+      class="w-[90%] mx-auto my-2"
+    >
+      Mostrar...
+    </button>
+  </mat-card>
+</div>
