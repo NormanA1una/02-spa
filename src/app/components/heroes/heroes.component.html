@@ -6,6 +6,7 @@
       *ngFor="let heroe of heroes; let i = index"
       [heroe]="heroe"
       [index]="i"
+      (heroeSeleccionado)="verHeroe($event)"
     ></app-heroe-tarjeta>
   </div>
 </div>

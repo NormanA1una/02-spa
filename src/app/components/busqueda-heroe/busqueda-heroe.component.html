@@ -16,9 +16,9 @@
 
   <div class="grid grid-cols-1 min-[820px]:grid-cols-3 gap-y-4 mt-4">
     <app-heroe-tarjeta
-      *ngFor="let heroe of heroes; let i = index"
+      *ngFor="let heroe of heroes"
       [heroe]="heroe"
-      [index]="i"
+      [index]="heroe.idx"
     ></app-heroe-tarjeta>
   </div>
 </div>
