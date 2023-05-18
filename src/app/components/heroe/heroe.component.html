@@ -1,5 +1,5 @@
-<div class="m-8 animated fadeIn">
-  <mat-card>
+<div class="m-4 animated fadeIn">
+  <mat-card class="max-[820px]:max-w-[400px] max-[820px]:mx-auto">
     <mat-card-header>
       <h1>
         {{ heroe.nombre | uppercase }}
@@ -7,30 +7,36 @@
       </h1>
     </mat-card-header>
     <mat-divider></mat-divider>
-    <mat-card-content class="max-[820px]:w-[400px]">
+    <mat-card-content>
       <div
         class="grid grid-cols-1 min-[820px]:grid-cols-2 min-[820px]:grid-cols-2 gap-4 p-4"
       >
         <div class="flex flex-col items-center">
-          <img
-            class="h-[300px] min-[820px]:h-[400px] w-[100%] max-w-[400px]"
-            [src]="heroe.image"
-            [alt]="heroe.nombre"
-          />
-          <a
-            [routerLink]="['/heroes']"
-            class="w-[90%] my-4"
-            mat-raised-button
-            color="primary"
-            >Regresar</a
-          >
+          <div>
+            <img
+              class="h-[200px] min-[820px]:h-[400px] w-[100%] max-w-[400px]"
+              [src]="heroe.image"
+              [alt]="heroe.nombre"
+            />
+          </div>
+          <div>
+            <a
+              [routerLink]="['/heroes']"
+              class="w-[90%] my-4"
+              mat-raised-button
+              color="primary"
+              >Regresar</a
+            >
+          </div>
         </div>
-        <div class="">
+        <div>
           <h3>{{ heroe.nombre }}</h3>
           <mat-divider class="my-4"></mat-divider>
-          <p>
-            {{ heroe.bio }}
-          </p>
+          <div class="max-w-[400px]">
+            <p>
+              {{ heroe.bio }}
+            </p>
+          </div>
           <div>
             <img
               *ngIf="heroe.casa === 'DC'"

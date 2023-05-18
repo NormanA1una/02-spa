@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar-mobile',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class NavbarMobileComponent {
   desplegar = false;
+
+  constructor(private router: Router) {}
+
+  buscarHeroe(termino: string) {
+    this.router.navigate(['/busquedaHeroe', termino]);
+  }
+
+  verResultado(termino: string) {
+    this.router.navigate(['/busquedaHeroe', termino]);
+  }
 }

@@ -19,31 +19,51 @@
   </mat-toolbar>
 
   <mat-toolbar
-    class="bg-slate-900 justify-center transition-opacity"
+    class="bg-slate-900 justify-between transition-opacity"
     *ngIf="desplegar"
   >
     <div class="flex items-center">
-      <div routerLinkActive="active" class="rounded-lg ml-2">
+      <div routerLinkActive="active" class="rounded-lg">
         <a
           [routerLink]="['home']"
-          class="mx-2 no-underline text-rose-500 p-2 rounded-lg"
+          class="no-underline text-rose-500 p-2 rounded-lg"
           >Home</a
         >
       </div>
       <div routerLinkActive="active" class="rounded-lg">
         <a
           [routerLink]="['heroes']"
-          class="mx-0.5 no-underline text-rose-500 p-2 rounded-lg"
+          class="no-underline text-rose-500 p-2 rounded-lg"
           >Heroes</a
         >
       </div>
       <div routerLinkActive="active" class="rounded-lg">
         <a
           [routerLink]="['about']"
-          class="mx-0.5 no-underline text-rose-500 p-2 rounded-lg"
+          class="no-underline text-rose-500 p-2 rounded-lg"
           >About</a
         >
       </div>
+    </div>
+    <div class="flex items-center">
+      <input
+        class="h-6 w-[120px] rounded"
+        type="text"
+        placeholder="Buscar Heroe"
+        #buscarTexto
+        (keyup.enter)="buscarHeroe(buscarTexto.value)"
+      />
+      <button
+        mat-icon-button
+        type="button"
+        class="example-icon hover:bg-slate-800 duration-500"
+        aria-label="Example icon-button with menu icon"
+        (click)="
+          buscarHeroe(buscarTexto.value); verResultado(buscarTexto.value)
+        "
+      >
+        <mat-icon class="text-white">search</mat-icon>
+      </button>
     </div>
   </mat-toolbar>
 </div>
